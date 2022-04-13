@@ -17,10 +17,10 @@ function new_artifact(name, artifact_toml, src_dir, tarball_dir, tarball_name, a
         new_hash; 
         force = true, 
         lazy = true, 
-        download_info = [(joinpath(download_root, replace(tarball_dir, pwd()*"/" => "")), tarball_hash)]
+        download_info = [(joinpath(download_root, replace(tarball_dir, pwd()*"/" => ""), tarball_name*".tar.gz"), tarball_hash)]
     )
 
     #return tarball_hash, new_hash
 end
 
-download_root = "https://github.com/StructuralEquationModels/Data"
+download_root = "https://github.com/StructuralEquationModels/Data/tree/main/"

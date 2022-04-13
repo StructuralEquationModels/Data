@@ -31,9 +31,9 @@ par_ls <- select(parTable(fit_ls), lhs, op, rhs, est, start, se)
 measures_ml <- fitMeasures(fit_ml)
 measures_ls <- fitMeasures(fit_ls)
 
-write.csv(par_ml, "datasets/political_democracy/csv/parameter_estimates_ml.csv")
-write.csv(par_ls, "datasets/political_democracy/csv/parameter_estimates_ls.csv")
-write.csv(data, "datasets/political_democracy/csv/data.csv")
+write.csv(par_ml, "datasets/political_democracy/csv/parameter_estimates_ml.csv", row.names = FALSE)
+write.csv(par_ls, "datasets/political_democracy/csv/parameter_estimates_ls.csv", row.names = FALSE)
+write.csv(data, "datasets/political_democracy/csv/data.csv", row.names = FALSE)
 
 write.csv(measures_ml, "test/examples/data/measures_dem_ml.csv")
 write.csv(measures_ls, "test/examples/data/measures_dem_ls.csv")
