@@ -6,5 +6,3 @@ src_dir = joinpath(@__DIR__, "csv")
 tarball_dir = joinpath(@__DIR__, "compressed")
 
 new_artifact("political_democracy", artifact_toml, src_dir, tarball_dir, "data.csv", "data.csv")
-
-cp(joinpath(csv_dir, "data.csv"), joinpath(csv_dir, "parameter_estimates_ls.csv"))
