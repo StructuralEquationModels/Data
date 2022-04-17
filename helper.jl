@@ -1,4 +1,4 @@
-function new_artifact(name, artifact_toml, src_dir, tarball_dir, tarball_name, args...)
+function new_artifact(name, artifact_toml, src_dir, tarball_dir, tarball_name, args...; commit = true)
     # Query the `Artifacts.toml` file for the hash bound to the name "political_democracy"
     # new_hash = artifact_hash(name, artifact_toml)
 
@@ -11,10 +11,14 @@ function new_artifact(name, artifact_toml, src_dir, tarball_dir, tarball_name, a
 
     tarball_hash = archive_artifact(new_hash, joinpath(tarball_dir, tarball_name*".tar.gz"))
 
-    message = "update $name"
-    run(`git add -u`)
-    run(`git commit -m $message`)
-    commit_hash = readchomp(`git rev-parse HEAD`)
+    if commit
+        message = "update $name"
+        run(`git add -u`)
+        run(`git commit -m $message`)
+        commit_hash = readchomp(`git rev-parse HEAD`)
+    else
+        commit_hash = ""
+    end
 
     bind_artifact!(
         artifact_toml, 
@@ -25,9 +29,12 @@ function new_artifact(name, artifact_toml, src_dir, tarball_dir, tarball_name, a
         download_info = [(joinpath(download_root, commit_hash, replace(tarball_dir, pwd()*"/" => ""), tarball_name*".tar.gz"), tarball_hash)]
     )
 
-    message = "update toml entry of $name"
-    run(`git add -u`)
-    run(`git commit -m $message`)
+    if commit
+        message = "update toml entry of $name"
+        run(`git add -u`)
+        run(`git commit -m $message`)
+    end
+
 end
 
 download_root = "https://github.com/StructuralEquationModels/Data/raw/"
