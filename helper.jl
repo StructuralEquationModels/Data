@@ -11,6 +11,11 @@ function new_artifact(name, artifact_toml, src_dir, tarball_dir, tarball_name, a
 
     tarball_hash = archive_artifact(new_hash, joinpath(tarball_dir, tarball_name*".tar.gz"))
 
+    message = "update $name"
+
+    run(`git add -u`)
+    run(`git commit -m $message`)
+
     bind_artifact!(
         artifact_toml, 
         name, 
@@ -23,4 +28,4 @@ function new_artifact(name, artifact_toml, src_dir, tarball_dir, tarball_name, a
     #return tarball_hash, new_hash
 end
 
-download_root = "https://github.com/StructuralEquationModels/Data/tree/main/"
+download_root = "https://github.com/StructuralEquationModels/Data/raw/"
