@@ -12,9 +12,9 @@ function new_artifact(name, artifact_toml, src_dir, tarball_dir, tarball_name, a
     tarball_hash = archive_artifact(new_hash, joinpath(tarball_dir, tarball_name*".tar.gz"))
 
     message = "update $name"
-
     run(`git add -u`)
     run(`git commit -m $message`)
+    commit_hash = readchomp(`git rev-parse HEAD`)
 
     bind_artifact!(
         artifact_toml, 
@@ -22,10 +22,12 @@ function new_artifact(name, artifact_toml, src_dir, tarball_dir, tarball_name, a
         new_hash; 
         force = true, 
         lazy = true, 
-        download_info = [(joinpath(download_root, replace(tarball_dir, pwd()*"/" => ""), tarball_name*".tar.gz"), tarball_hash)]
+        download_info = [(joinpath(download_root, commit_hash, replace(tarball_dir, pwd()*"/" => ""), tarball_name*".tar.gz"), tarball_hash)]
     )
 
-    #return tarball_hash, new_hash
+    message = "update toml entry of $name"
+    run(`git add -u`)
+    run(`git commit -m $message`)
 end
 
 download_root = "https://github.com/StructuralEquationModels/Data/raw/"
