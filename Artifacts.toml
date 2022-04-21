@@ -11,8 +11,8 @@ git-tree-sha1 = "3f8c5ccce43ced81c6fbcc76e9b91c5268ea0393"
 lazy = true
 
     [[political_democracy_missing.download]]
-    sha256 = "1204626c6121ae057b8eda022ffcaf73e9dfbe90090a060930614e8874275782"
-    url = "https://github.com/StructuralEquationModels/Data/raw/76437f19971e59090e6893308c0f52895c4fee62/datasets/political_democracy/compressed/data_fiml.csv.tar.gz"
+    sha256 = "0d8f91f89f3a3161510e798b4097f4caec15274f7fdc2435bb08f27919f4e6c5"
+    url = "https://github.com/StructuralEquationModels/Data/raw/e083f4ccadda2422119a098a717a16dd6adb1f20/datasets/political_democracy/compressed/data_fiml.csv.tar.gz"
 
 [political_democracy_solution]
 git-tree-sha1 = "6d86194bc13aa01eb3cf92a3aad834110432481c"
