@@ -6,6 +6,14 @@ lazy = true
     sha256 = "e8b4d62067923d36d232e1e356d3634ff3942353cfe080f10699467260af2652"
     url = "https://github.com/StructuralEquationModels/Data/raw/b29d2da78e5e9abc9bda101bde9a1bf4c4b2b98b/datasets/political_democracy/compressed/data.csv.tar.gz"
 
+[political_democracy_missing]
+git-tree-sha1 = "3f8c5ccce43ced81c6fbcc76e9b91c5268ea0393"
+lazy = true
+
+    [[political_democracy_missing.download]]
+    sha256 = "1204626c6121ae057b8eda022ffcaf73e9dfbe90090a060930614e8874275782"
+    url = "https://github.com/StructuralEquationModels/Data/raw/76437f19971e59090e6893308c0f52895c4fee62/datasets/political_democracy/compressed/data_fiml.csv.tar.gz"
+
 [political_democracy_solution]
 git-tree-sha1 = "6d86194bc13aa01eb3cf92a3aad834110432481c"
 lazy = true
