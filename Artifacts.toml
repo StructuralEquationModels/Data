@@ -19,5 +19,5 @@ git-tree-sha1 = "6d86194bc13aa01eb3cf92a3aad834110432481c"
 lazy = true
 
     [[political_democracy_solution.download]]
-    sha256 = "f10127beda2bc29eacd6d26e1be8d32fa6f1527ccc0a0f4b3970c4ee328970bb"
-    url = "https://github.com/StructuralEquationModels/Data/raw/f0673213071885ce43df566ec68dfce5821c8409/datasets/political_democracy/compressed/political_democracy_solution.tar.gz"
+    sha256 = "d901ad35238ff747070f85ecdbc603d0f2d2e06e075eec4108492307fb057c49"
+    url = "https://github.com/StructuralEquationModels/Data/raw/3bc0fbd41ae6ec0d9b7a6bb91b661bd44aa77542/datasets/political_democracy/compressed/political_democracy_solution.tar.gz"
