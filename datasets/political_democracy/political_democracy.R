@@ -35,14 +35,8 @@ write.csv(par_ml, "datasets/political_democracy/csv/parameter_estimates_ml.csv",
 write.csv(par_ls, "datasets/political_democracy/csv/parameter_estimates_ls.csv", row.names = FALSE)
 write.csv(data, "datasets/political_democracy/csv/data.csv", row.names = FALSE)
 
-write.csv(measures_ml, "test/examples/data/measures_dem_ml.csv")
-write.csv(measures_ls, "test/examples/data/measures_dem_ls.csv")
-
-# starting values for fixed variances
-fit_ml <- cfa(model, data, likelihood = "wishart", do.fit = FALSE, std.lv = TRUE)
-par_ml_stdlv <- select(parTable(fit_ml), lhs, op, rhs, est, start)
-
-write.csv(par_ml_stdlv, "test/examples/data/par_dem_ml_stdlv.csv")
+write.csv(measures_ml, "datasets/political_democracy/csv/fitmeasures_ml.csv", row.names = FALSE)
+write.csv(measures_ls, "datasets/political_democracy/csv/fitmeasures_ls.csv", row.names = FALSE)
 
 # meanstructure
 model <-    "# measurement model
@@ -77,11 +71,11 @@ par_ls <- select(parTable(fit_ls), lhs, op, rhs, est, start, se)
 measures_ml <- fitMeasures(fit_ml)
 measures_ls <- fitMeasures(fit_ls)
 
-write.csv(par_ml, "test/examples/data/par_dem_ml_mean.csv")
-write.csv(par_ls, "test/examples/data/par_dem_ls_mean.csv")
+write.csv(par_ml, "datasets/political_democracy/csv/parameter_estimates_ml_mean.csv")
+write.csv(par_ls, "datasets/political_democracy/csv/parameter_estimates_ls_mean.csv")
 
-write.csv(measures_ml, "test/examples/data/measures_dem_ml_mean.csv")
-write.csv(measures_ls, "test/examples/data/measures_dem_ls_mean.csv")
+write.csv(measures_ml, "datasets/political_democracy/csv/fitmeasures_ml_mean.csv")
+write.csv(measures_ls, "datasets/political_democracy/csv/fitmeasures_ls_mean.csv")
 
 # fiml
 p_miss <- 0.2
@@ -100,6 +94,6 @@ par_ml <- select(parTable(fit_ml), lhs, op, rhs, est, start, se)
 
 measures_ml <- fitMeasures(fit_ml)
 
-write.csv(par_ml, "test/examples/data/par_dem_ml_fiml.csv")
-write.csv(data_miss, "test/examples/data/data_dem_fiml.csv")
-write.csv(measures_ml, "test/examples/data/measures_dem_fiml.csv")
+write.csv(par_ml, "datasets/political_democracy/csv/parameter_estimates_fiml.csv")
+write.csv(data_miss, "datasets/political_democracy/csv/data_fiml.csv")
+write.csv(measures_ml, "datasets/political_democracy/csv/fitmeasures_fiml.csv")
