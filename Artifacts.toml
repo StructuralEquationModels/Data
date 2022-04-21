@@ -13,3 +13,11 @@ lazy = true
     [[political_democracy_fiml.download]]
     sha256 = "2ce762f8dd75d12d29cee64135875a69a9d1ef42a8910a10c9728c9b2ea89062"
     url = "https://github.com/StructuralEquationModels/Data/raw/d5dd62485aa4dcb3344cf6d0adda00aae2f36c6f/datasets/political_democracy/compressed/data_fiml.csv.tar.gz"
+
+[political_democracy_solution]
+git-tree-sha1 = "6d86194bc13aa01eb3cf92a3aad834110432481c"
+lazy = true
+
+    [[political_democracy_solution.download]]
+    sha256 = "3b0881a8e8dd516084a576a48aedeafbd8d792bda533f2fee7dc900871e4b356"
+    url = "https://github.com/StructuralEquationModels/Data/raw/datasets/political_democracy/compressed/political_democracy_solution.tar.gz"
