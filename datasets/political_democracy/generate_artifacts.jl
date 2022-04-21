@@ -7,7 +7,7 @@ tarball_dir = joinpath(@__DIR__, "compressed")
 
 new_artifact("political_democracy", artifact_toml, src_dir, tarball_dir, "data.csv", "data.csv")
 
-new_artifact("political_democracy_fiml", artifact_toml, src_dir, tarball_dir, "data_fiml.csv", "data_fiml.csv")
+new_artifact("political_democracy_missing", artifact_toml, src_dir, tarball_dir, "data_fiml.csv", "data_fiml.csv")
 
 new_artifact(
     "political_democracy_solution", 

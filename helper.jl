@@ -13,7 +13,7 @@ function new_artifact(name, artifact_toml, src_dir, tarball_dir, tarball_name, a
 
     if commit
         message = "update $name"
-        run(`git add -u`)
+        run(`git add .`)
         run(`git commit -m $message`)
         commit_hash = readchomp(`git rev-parse HEAD`)
     else
