@@ -35,8 +35,8 @@ write.csv(par_ml, "datasets/political_democracy/csv/parameter_estimates_ml.csv",
 write.csv(par_ls, "datasets/political_democracy/csv/parameter_estimates_ls.csv", row.names = FALSE)
 write.csv(data, "datasets/political_democracy/csv/data.csv", row.names = FALSE)
 
-write.csv(measures_ml, "datasets/political_democracy/csv/fitmeasures_ml.csv", row.names = FALSE)
-write.csv(measures_ls, "datasets/political_democracy/csv/fitmeasures_ls.csv", row.names = FALSE)
+write.csv(measures_ml, "datasets/political_democracy/csv/fitmeasures_ml.csv")
+write.csv(measures_ls, "datasets/political_democracy/csv/fitmeasures_ls.csv")
 
 # meanstructure
 model <-    "# measurement model
@@ -71,8 +71,8 @@ par_ls <- select(parTable(fit_ls), lhs, op, rhs, est, start, se)
 measures_ml <- fitMeasures(fit_ml)
 measures_ls <- fitMeasures(fit_ls)
 
-write.csv(par_ml, "datasets/political_democracy/csv/parameter_estimates_ml_mean.csv")
-write.csv(par_ls, "datasets/political_democracy/csv/parameter_estimates_ls_mean.csv")
+write.csv(par_ml, "datasets/political_democracy/csv/parameter_estimates_ml_mean.csv", row.names = FALSE)
+write.csv(par_ls, "datasets/political_democracy/csv/parameter_estimates_ls_mean.csv", row.names = FALSE)
 
 write.csv(measures_ml, "datasets/political_democracy/csv/fitmeasures_ml_mean.csv")
 write.csv(measures_ls, "datasets/political_democracy/csv/fitmeasures_ls_mean.csv")
@@ -94,6 +94,6 @@ par_ml <- select(parTable(fit_ml), lhs, op, rhs, est, start, se)
 
 measures_ml <- fitMeasures(fit_ml)
 
-write.csv(par_ml, "datasets/political_democracy/csv/parameter_estimates_fiml.csv")
-write.csv(data_miss, "datasets/political_democracy/csv/data_fiml.csv")
+write.csv(par_ml, "datasets/political_democracy/csv/parameter_estimates_fiml.csv", row.names = FALSE)
+write.csv(data_miss, "datasets/political_democracy/csv/data_fiml.csv", row.names = FALSE)
 write.csv(measures_ml, "datasets/political_democracy/csv/fitmeasures_fiml.csv")
