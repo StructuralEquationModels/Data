@@ -1,3 +1,11 @@
+[holzinger_swineford]
+git-tree-sha1 = "ecbc654bfd8a29343099e750f366dfaf811b0cd1"
+lazy = true
+
+    [[holzinger_swineford.download]]
+    sha256 = "6721742052d7a87b9674d82a2c4c85ca4a930e1c5f5a7e8ed748b7ad89bf82fc"
+    url = "https://github.com/StructuralEquationModels/Data/raw/684747d424625c6bcc170ec44a88f48600be3d44/datasets/holzinger_swineford/compressed/data.csv.tar.gz"
+
 [political_democracy]
 git-tree-sha1 = "a02b07e3523570d8a27c9fe10dcac3a1e4705c33"
 lazy = true
