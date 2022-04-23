@@ -6,6 +6,14 @@ lazy = true
     sha256 = "6721742052d7a87b9674d82a2c4c85ca4a930e1c5f5a7e8ed748b7ad89bf82fc"
     url = "https://github.com/StructuralEquationModels/Data/raw/684747d424625c6bcc170ec44a88f48600be3d44/datasets/holzinger_swineford/compressed/data.csv.tar.gz"
 
+[holzinger_swineford_missing]
+git-tree-sha1 = "044e11352e9d79e3c4a92d99bc273c8c790d9cdf"
+lazy = true
+
+    [[holzinger_swineford_missing.download]]
+    sha256 = "1896a4eaa7d1797e7480176d0fca96b2cdf835a7cab6f71b16bded8844f8a6fc"
+    url = "https://github.com/StructuralEquationModels/Data/raw/0462a36018c71b8559dc76819d56a538857593c8/datasets/holzinger_swineford/compressed/data_fiml.csv.tar.gz"
+
 [political_democracy]
 git-tree-sha1 = "a02b07e3523570d8a27c9fe10dcac3a1e4705c33"
 lazy = true
