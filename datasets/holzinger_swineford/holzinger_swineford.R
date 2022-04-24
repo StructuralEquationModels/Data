@@ -25,8 +25,8 @@ fit_ls <- cfa(model,
            information = "observed",
            meanstructure = FALSE)
 
-par_ml <- select(parTable(fit_ml), lhs, op, rhs, est, start, free, se)
-par_ls <- select(parTable(fit_ls), lhs, op, rhs, est, start, free, se)
+par_ml <- select(parTable(fit_ml), lhs, op, rhs, est, start, free, se, group)
+par_ls <- select(parTable(fit_ls), lhs, op, rhs, est, start, free, se, group)
 
 measures_ml <- fitMeasures(fit_ml)
 measures_ls <- fitMeasures(fit_ls)
@@ -56,9 +56,9 @@ fit_ml <- cfa(model,
            group.equal = c("loadings"),
            information = "observed")
 
-par_ml <- select(parTable(fit_ml), lhs, op, rhs, est, start, free, se)
+par_ml <- select(parTable(fit_ml), lhs, op, rhs, est, start, free, se, group)
 measures_ml <- fitMeasures(fit_ml)
 
 write.csv(par_ml, "datasets/holzinger_swineford/csv/parameter_estimates_fiml.csv", row.names = FALSE)
 write.csv(data_miss, "datasets/holzinger_swineford/csv/data_fiml.csv", row.names = FALSE)
-write.csv(measures_ml, "datasets/holzinger_swineford/csv/fitmeasures_fiml.csv", row.names = FALSE)
+write.csv(measures_ml, "datasets/holzinger_swineford/csv/fitmeasures_fiml.csv")
